@@ -21,11 +21,15 @@ function ProtectedPage({children}) {
             dispatch(SetCurrentUser(response.data));
         }
         else{
-            throw new Error(response.message);
+            // throw new Error(response.message);
+            localStorage.removeItem("token");
+            navigate("/login");
         }
     } catch (error) {
         dispatch(SetLoading(false));
         message.error(error.message);
+        localStorage.removeItem("token");
+        navigate("/login");
     }
   }
 
