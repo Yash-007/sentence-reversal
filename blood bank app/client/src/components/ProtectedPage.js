@@ -6,6 +6,7 @@ import { getLoggedInUserName } from '../utils/helpers';
 import { useDispatch, useSelector } from 'react-redux';
 import { SetCurrentUser } from '../redux/userSlice';
 import { SetLoading } from '../redux/loaderSlice';
+import '../../src/index.css';
 
 function ProtectedPage({children}) {
   const {currentUser} = useSelector((state)=> state.users);
@@ -21,11 +22,15 @@ function ProtectedPage({children}) {
             dispatch(SetCurrentUser(response.data));
         }
         else{
-            throw new Error(response.message);
+            // throw new Error(response.message);
+            localStorage.removeItem("token");
+            navigate("/login");
         }
     } catch (error) {
         dispatch(SetLoading(false));
         message.error(error.message);
+        localStorage.removeItem("token");
+        navigate("/login");
     }
   }
 
@@ -41,23 +46,26 @@ function ProtectedPage({children}) {
    currentUser && (
     <>
        {/* header  */}
-      <div className='flex justify-between items-center bg-primary text-white px-5 py-3 mx-5 rounded-b'>
+      <div className='flex justify-between items-center bg-primary text-white px-5 py-3 sm:mx-1 rounded-b sm:gap-5 style="
+    min-width: 270px'>
         <div onClick={()=> navigate("/")} className='cursor-pointer'>
-        <h1 className='text-2xl'>YASH BLOODBANK</h1>
+        <h1 className='text-2xl main-head'>
+  YASH BLOODBANK
+</h1>
         <span className='text-xs'>
             {currentUser.userType.toUpperCase()}
         </span>
         </div>
         
-        <div className='flex items-center gap-1'>
+        <div className='flex items-center gap-1 ml-2'>
         <i className="ri-shield-user-fill"></i>
           <div className='flex flex-col'>
-           <span className='mr-5 text-md cursor-pointer' onClick={()=> navigate("/profile")}>
+           <span className='mr-2 cursor-pointer text-xl user-name' onClick={()=> navigate("/profile")}>
 
            {getLoggedInUserName(currentUser).toUpperCase()}
            </span>
           </div>
-          <i className="ri-logout-circle-r-line ml-5 cursor-pointer" onClick={()=>{
+          <i className="ri-logout-circle-r-line md:ml-3 cursor-pointer lgout" onClick={()=>{
             localStorage.removeItem("token");
             navigate("/login")
           }}></i>

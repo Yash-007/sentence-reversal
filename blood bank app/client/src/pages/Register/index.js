@@ -7,6 +7,7 @@ import { RegisterUser } from '../../apicalls/users';
 import { useDispatch } from 'react-redux';
 import { SetLoading } from '../../redux/loaderSlice';
 import { getAntdInputValidation } from '../../utils/helpers';
+import '../../../src/index.css';
 function Register() {
   const [type, setType]= useState('donar');
   const navigate = useNavigate();
@@ -43,9 +44,9 @@ function Register() {
     <>
     <div className='flex h-screen items-center justify-center bg-primary'>
     <Form layout="vertical"
-     className="bg-white rounded shadow grid grid-cols-2 p-5 gap-5 w-1/2"
+     className="bg-white rounded shadow grid grid-cols-2 p-5 gap-5 lg:w-1/3 set"
      onFinish={onFinish}>
-     <h1 className='col-span-2 uppercase text-2xl'>
+     <h1 className='col-span-2 uppercase ttxt'>
         <span className='text-primary'>{type.toUpperCase()} - REGISTRAION</span>
         <hr />
      </h1>

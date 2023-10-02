@@ -41,7 +41,7 @@ function Login() {
     <>
     <div className='flex h-screen items-center justify-center bg-primary'>
     <Form layout="vertical"
-     className="bg-white rounded shadow grid p-5 gap-5 w-1/3"
+     className="bg-white rounded shadow grid p-5 gap-5 lg:w-1/3 md:w-1/3 sm:w-1/2 mx-7"
      onFinish={onFinish}>
      <h1 className='uppercase text-2xl'>
         <span className='text-primary'>{type.toUpperCase()} - LOGIN</span>

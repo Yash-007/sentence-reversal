@@ -72,7 +72,7 @@ function Inventory() {
           </Button>
         </div>
      
-     <Table columns={columns} dataSource = {data}  className='mt-4'></Table>
+     <Table columns={columns} dataSource = {data}  className='mt-4' scroll={{ x: true }}></Table>
 
     {open && <InventoryForm open={open} setOpen={setOpen}
       reloadData={getData}

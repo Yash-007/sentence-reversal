@@ -82,7 +82,7 @@ function InventoryTable({filters, userType, limit}) {
     }, []);
   return (
     <div>
-    <Table columns={columns} dataSource = {data}  className='mt-4'></Table>
+    <Table columns={columns} dataSource = {data}  className='mt-4' scroll={{ x: true }}></Table>
     </div>
   )
 }
