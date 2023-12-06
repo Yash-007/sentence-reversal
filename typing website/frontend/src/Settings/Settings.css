@@ -1,0 +1,43 @@
+body {
+    height: 100vh;
+}
+
+.main-head {
+    width: 190px;
+    margin: 50px auto;
+    font-size: 50px;
+}
+
+.theme-container {
+    margin: 0 100px;
+    margin-top: 150px;
+    height: 260px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.box {
+    cursor: pointer;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: blueviolet;
+    font-size: 30px;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    /* Increase the size on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* Add a subtle shadow on hover */
+    position: relative;
+    top: -10px;
+    /* Move the box up slightly on hover */
+    /* margin: 10px; */
+}

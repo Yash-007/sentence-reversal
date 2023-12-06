@@ -1,0 +1,39 @@
+/* YourComponent.css */
+.container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px; /* Adjust as needed */
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left-section,
+  .right-section {
+    flex: 1;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer span,
+  .footer div {
+    flex: 1;
+    text-align: center;
+  }
+  

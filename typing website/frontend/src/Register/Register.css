@@ -1,0 +1,70 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 89.2vh;
+    background-color: yellow;
+}
+.form{
+    padding: 40px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: gray;
+}
+.input-container{
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin: 20px;
+}
+
+.label{
+    /* margin-right: 10px; */
+    font-weight: bold;
+    width: 150px;
+    /* text-align: left; */
+    /* margin-left: 0; */
+}
+.input-field{
+    border-radius: 5px;
+    /* justify-content: right; */
+    /* align-items:end; */
+    /* margin-left: 0px; */
+}
+.button{
+   margin-left: 135px;
+}
+.last-para{
+    text-align: center;
+    margin-top: 5px;
+}
+.sign-up{
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.css-button-3d--sky {
+    min-width: 80px;
+    height: 25px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #3a86ff;
+    box-shadow: 0 5px #4433ff;
+  }
+  .css-button-3d--sky:hover {
+    box-shadow: 0 3px #4433ff;
+    top: 1px;
+  }
+  .css-button-3d--sky:active {
+    box-shadow: 0 0 #4433ff;
+    top: 5px;
+  }
